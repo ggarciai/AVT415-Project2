@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+<title>Gustavo Garcia</title>
+      <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+<nav class="navbar">
+  <a href="../about/index.html">ABOUT</a>
+  <a href="index.html">ART</a>
+  <a href="../graphicdesign/index.html">GRAPHIC DESIGN</a>
+  <a href="../index.html">HOME</a>
+</nav>
+<div class="column2">
+  <div src="img" class="main">
+    <h1>Art Portfolio</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+      <img src="img/a1.png" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width:100%">
+      <img src="img/a2.png" onclick="openModal();currentSlide(2)" class="hover-shadow" style="width:100%">
+      <img src="img/a3.png" onclick="openModal();currentSlide(3)" class="hover-shadow" style="width:100%">
+      <img src="img/a4.png" onclick="openModal();currentSlide(4)" class="hover-shadow" style="width:100%">
+      <img src="img/a5.png" onclick="openModal();currentSlide(5)" class="hover-shadow" style="width:100%">
+    </div>
+  <div class="column">
+    <img src="img/a6.png" onclick="openModal();currentSlide(6)" class="hover-shadow" style="width:100%">
+    <img src="img/a7.png" onclick="openModal();currentSlide(7)" class="hover-shadow" style="width:100%">
+    <img src="img/a8.png" onclick="openModal();currentSlide(8)" class="hover-shadow" style="width:100%">
+    <img src="img/a9.png" onclick="openModal();currentSlide(9)" class="hover-shadow" style="width:100%">
+    <img src="img/a10.png" onclick="openModal();currentSlide(10)" class="hover-shadow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="img/a10.png" onclick="openModal();currentSlide(10)" class="hover-shadow" style="width:100%">
+    <img src="img/a5.png" onclick="openModal();currentSlide(5)" class="hover-shadow" style="width:100%">
+    <img src="img/a7.png" onclick="openModal();currentSlide(7)" class="hover-shadow" style="width:100%">
+    <img src="img/a6.png" onclick="openModal();currentSlide(6)" class="hover-shadow" style="width:100%">
+    <img src="img/a2.png" onclick="openModal();currentSlide(2)" class="hover-shadow" style="width:100%">
+  </div>
+<div class="column">
+  <img src="img/a1.png" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width:100%">
+  <img src="img/a8.png" onclick="openModal();currentSlide(8)" class="hover-shadow" style="width:100%">
+  <img src="img/a3.png" onclick="openModal();currentSlide(3)" class="hover-shadow" style="width:100%">
+  <img src="img/a9.png" onclick="openModal();currentSlide(9)" class="hover-shadow" style="width:100%">
+  <img src="img/a4.png" onclick="openModal();currentSlide(4)" class="hover-shadow" style="width:100%">
+  </div>
+
+  <div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 10</div>
+      <img src="img/a1.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 10</div>
+      <img src="img/a2.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 10</div>
+      <img src="img/a3.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 10</div>
+      <img src="img/a4.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 10</div>
+      <img src="img/a5.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 10</div>
+      <img src="img/a6.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 10</div>
+      <img src="img/a7.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 10</div>
+      <img src="img/a8.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 10</div>
+      <img src="img/a9.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 / 10</div>
+      <img src="img/a10.png" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Caption text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+  </div>
+
+</div>
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>
