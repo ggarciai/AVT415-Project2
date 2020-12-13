@@ -120,16 +120,8 @@ p {
   background: black;
   Height: 10px;
 }
-@media (max-width: 800px) {
-  body {
-    flex: 50%;
-    max-width: 100%;
+@media only screen and (max-device-widh: 800px) {
+  .hero-image .hero-image3 {
+    background-attachment: scroll;
   }
 }
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
-  body {
-    flex: 100%;
-    max-width: 100%;
-  }
