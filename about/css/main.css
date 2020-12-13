@@ -1,3 +1,7 @@
+/* Ensure proper sizing */
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: white;
   height: 100%;
@@ -14,6 +18,9 @@ body {
 .navbar {
   overflow: hidden;
   background-color: black;
+  z-index: 10000;
+  position: fixed;
+  width: 100%
 }
 .navbar a {
   float: right;
@@ -27,36 +34,43 @@ body {
   background-color: #ddd;
   color: black;
 }
-.slides {
-  background-color: navajowhite;
-  height: 500px
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px  0px 0px 0px;
 }
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 40%; /* Set the width of the sidebar */
+  background-color: #f1f1f1; /* Grey background color */
+  padding: 20px; /* Some padding */
+}
+
+/* Main column */
 .main {
-  flex: 100%;
-  background-color: white;
-  padding: 20px;
-  text-align: left;
-}
-.img {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px auto;
+  flex: 60%; /* Set the width of the main content */
+  wrap: 100%;
+  background-color: white; /* Black background color */
+  padding: 20px; /* Some padding */
+  height: 100%;
+
 
 }
-.column {
-  float: left;
-  width: 75%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
+  background-color: white;
 }
-h2 {
-  font-size: 4vw;
+]
+h1 {
+  padding: 50px 0px 0px 0px;
+  text-align: center;
+  color: white;
 }
-p {
-  font-size: 2vw;
+p2 {
+  font-size: 25px;
+  width: 200px;
+
 }

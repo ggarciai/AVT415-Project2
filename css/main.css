@@ -1,6 +1,10 @@
 body {
   background-color: grey;
 }
+a {
+  text-decoration: none;
+  color: White;
+}
 .navigation {
   background-color: black;
   height: 50px;
@@ -11,6 +15,9 @@ body {
 .navbar {
   overflow: hidden;
   background-color: black;
+  z-index: 10000;
+  position: fixed;
+  width: 100%
 }
 .navbar a {
   float: right;
@@ -47,12 +54,44 @@ body, html {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../art/img/a4.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../art/img/a4.png");
   height: 100%;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+}
+.hero-image2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../graphicdesign/img/gd7.png");
+  height: 65%;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+.hero-image3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../art/img/a9.png");
+  height: 65%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
+.hero-image4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../art/img/a8.png");
+  height: 45%;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
 }
 
 .hero-text {
@@ -62,10 +101,22 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  text-shadow: 2px 2px 4px #000000;
+  transition: 0.3s;
 }
+.hero-text:hover {
+  transform: translate(-50%, -50%) scale(1.10);
+}
+
+
 h1 {
   font-size: 5vw;
+
 }
 p {
   font-size: 2vw;
+}
+.break {
+  background: black;
+  Height: 10px;
 }
