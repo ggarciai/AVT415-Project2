@@ -120,8 +120,8 @@ p {
   background: black;
   Height: 10px;
 }
-@media only screen and (max-device-widh: 800px) {
-  .hero-image .hero-image3 {
+@media only screen and (max-device-width: 1366px) {
+  .hero-image, .hero-image3 {
     background-attachment: scroll;
   }
 }
